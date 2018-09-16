@@ -1,0 +1,11 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<ul>
+    @foreach (var m in Model.Maps)
+    {
+        <li><a asp-page="Map" asp-route-id="@m.Key">@m.Value</a></li>
+    }
+</ul>
